@@ -1,0 +1,5 @@
+FROM node:16.7.0-alpine
+
+COPY . .
+
+ENTRYPOINT node backend.js & node proxy.js & node request.js
